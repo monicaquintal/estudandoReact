@@ -14,4 +14,4 @@
 <a href="./aulas/aula03.md">Aula 03: Configurando Babel.</a><br>
 <a href="./aulas/aula04.md">Aula 04: Configurando Webpack.</a><br>
 <a href="./aulas/aula05.md">Aula 05: Estrutura do ReactJS.</a><br>
-<a href="./aulas/aula06.md">Aula 06:</a><br>
+<a href="./aulas/aula06.md">Aula 06: Servindo HTML estático.</a><br>
