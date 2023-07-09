@@ -1,7 +1,7 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h1>Estudando ReactJS</h1>
-<p>Repositório criado para armazenamento dos primeiros estudos sobre React.</p>
+<h1>Estudando React</h1>
+<p>Repositório criado para armazenamento dos primeiros estudos sobre React JS.</p>
 </div>
 
 <div id="conteudo" align="justify">
@@ -19,3 +19,4 @@
 <a href="./aulas/aula09.md">Aula 09: Utilizando source maps.</a><br>
 <a href="./aulas/aula10.md">Aula 10: Ambiente dev e produção.</a><br>
 <a href="./aulas/aula11.md">Aula 11: Importando arquivos CSS.</a><br>
+<a href="./aulas/aula12.md">Aula 12: Utilizando SASS.</a><br>
