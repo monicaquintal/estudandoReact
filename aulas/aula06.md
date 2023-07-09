@@ -1,49 +1,66 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 06: Estrutura do ReactJS.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 06: Servindo HTML estático.</h2>
-</div>
+- no [index.html](../reactjs/01-github-explorer/public/index.html), não estará a estrutura da página; haverá **apenas um único elemento no body, chamado de `root`**!
+  - a aplicação React será construída dentro desta div.
 
-- podemos remover a tag &lt;script&gt; do arquivo [index.html](../reactjs/01-github-explorer/public/index.html).
-- no [webpack.config.js](../reactjs/01-github-explorer/webpack.config.js), instalar `yarn add html-webpack-plugin -D`, e importá-lo no arquivo:
-
-~~~javascript
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
-  mode: 'development',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'), //define o arquivo inicial da aplicação
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html')
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      }
-    ],
-  }
-}
+~~~html
+<div id="root"></div>
 ~~~
 
-- quando executado `yarn webpack`, será gerado o index.html na pasta dist, já referenciando automaticamente o bundle.js!!!
-  - ou seja, faz a referência automaticamente e, em caso de alterações, como renomeando o arquivo, não haverá necessidade de alterar as referências manualmente.
+- em [index.jsx](../reactjs/01-github-explorer/src/index.jsx), importar de dentro do pacote react-dom, uma função chamada render.
+
+~~~javascript
+import React from 'react';
+import { render } from 'react-dom';
+import { App } from './App'
+
+render(<h1>Hello World! 🙋‍♀️🌎</h1>, document.getElementById('root'))
+// dois parâmetros:
+// 1. o que quero renderizar, exibir em tela.
+// 2. dentro de qual elemento quero renderizar a informação
+~~~
+
+- adicionar a tag &lt;script&gt; no arquivo [index.html](../reactjs/01-github-explorer/public/index.html).
+
+~~~html
+<div id="root"></div>
+<script src="../dist/bundle.js"></script>
+~~~
+
+- executar `yarn webpack` e visualizar o arquivo com Live Server!
+
+### Observação:
+
+- atualmente, não precisamos importar o React em cada um dor arquivos em que utilizaremos HTML.
+- portanto:
+  - remover a primeira linha do código acima (import React from 'react';)
+  - em [babel.config.js](../reactjs/01-github-explorer/babel.config.js), alterar a configuração para:
+
+~~~javascript
+module.exports = {
+  presets: [
+    '@babel/preset-env',
+    ['@babel/preset-react', {
+      runtime: 'automatic'
+    }]
+  ]
+};
+~~~
+
+- após executar `yarn webpack`, não será retornada mensagem de erro, e será exibido normalmente no browser.
+
+- ao invés de utilizar as tags HTML no arquivo [index.jsx](../reactjs/01-github-explorer/src/index.jsx), podemos também importar a função App(), criada no arquivo [App.jsx](../reactjs/01-github-explorer/src/App.jsx), da seguinte forma:
+
+~~~javascript
+import { render } from 'react-dom';
+import { App } from './App'
+
+render(<App/>, document.getElementById('root'))
+~~~
 
 ---
 

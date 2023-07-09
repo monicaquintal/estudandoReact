@@ -1,42 +1,26 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 09: Utilizando source maps.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 09: Ambiente dev e produção.</h2>
-</div>
-
-- configurar um ambiente de desenvolvimento e um de produção, nos quais o webpack se comportará de formas diferentes.
-
-
-### No arquivo [webpack.config.js](../reactjs/01-github-explorer/webpack.config.js):
+- Funcionalidade `Source maps` do webpack: trata-se de uma forma de conseguir visualizar o código original da aplicação, mesmo quando está embaralhado na forma do bundle.js!
+- em [webpack.config.js](../reactjs/01-github-explorer/webpack.config.js), incluir:
 
 ~~~javascript
-const isDevelopment = process.env.NODE_ENV !== 'production';
-// NODE_ENV: variável comum;
-// usada para identificar se o ambiente é de desenvolvimento ou produção.
-
-module.exports = {
-  mode: isDevelopment ? 'development' : 'production',
-  devtool: isDevelopment ? 'eval-source-map' : 'source-map';
+devtool: 'eval-source-map',
 ~~~
 
-### Para criar a variável `NODE_ENV`, há algumas formas:
-- caso sejaLinux ou mac, no terminal, `NODE_ENV=production yarn webpack`, o que não funciona no windows.
-- para criar variáveis de ambiente, independente do SO: `yarn add cross-env -D`.
-  - e no [package.json](../reactjs/01-github-explorer/package.json), criar alguns scripts (atalhos) acima das dependências:
+- exemplificado através da inserção de um erro no arquivo [App.jsx](../reactjs/01-github-explorer/src/App.jsx).
 
-~~~json
-"scripts": {
-  "dev": "webpack serve",
-  "build": "cross-env NODE_ENV=production webpack"
-},
+~~~jsx
+export function App() {
+  throw new Error('Eita, Giovanna, o forninho caiu!')
+  return <h1>Hello ReactJS! 🤖</h1>
+}
 ~~~
 
-- executar `yarn dev`: executará o projeto para ambiente de desenvolvimento!
-  - `yarn build` executará para ambiente de produção.
+- antes do Source maps, não era mostrada exatamente a localização do erro; após sua inclusão, basta clicar no erro (quando abrimos o devtools do navegador), que ele exibirá corretamente a linha e o local/arquivo!
 
 ---
 

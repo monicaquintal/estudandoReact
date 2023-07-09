@@ -1,70 +1,62 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 05: Configurando Webpack.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 05: Estrutura do ReactJS.</h2>
-</div>
-
-- no [index.html](../reactjs/01-github-explorer/public/index.html), não estará a estrutura da página; haverá **apenas um único elemento no body, chamado de `root`**!
-  - a aplicação React será construída dentro desta div.
-
-~~~html
-<div id="root"></div>
-~~~
-
-- em [index.jsx](../reactjs/01-github-explorer/src/index.jsx), importar de dentro do pacote react-dom, uma função chamada render.
+- muitas vezes utilizado em conjunto com o Babel.
+- estipula configurações (loaders), que "ensinam" a aplicação como deve tratar os diferentes tipos de arquivos importados, como JSON, CSS, SASS, imagens, etcm tornando-os "legíveis" pelo browser.
+- para instalar: `yarn add webpack-cli -D`
 
 ~~~javascript
-import React from 'react';
-import { render } from 'react-dom';
-import { App } from './App'
+const path = require('path')
 
-render(<h1>Hello World! 🙋‍♀️🌎</h1>, document.getElementById('root'))
-// dois parâmetros:
-// 1. o que quero renderizar, exibir em tela.
-// 2. dentro de qual elemento quero renderizar a informação
-~~~
-
-- adicionar a tag &lt;script&gt; no arquivo [index.html](../reactjs/01-github-explorer/public/index.html).
-
-~~~html
-<div id="root"></div>
-<script src="../dist/bundle.js"></script>
-~~~
-
-- executar `yarn webpack` e visualizar o arquivo com Live Server!
-
-### Observação:
-
-- atualmente, não precisamos importar o React em cada um dor arquivos em que utilizaremos HTML.
-- portanto:
-  - remover a primeira linha do código acima (import React from 'react';)
-  - em [babel.config.js](../reactjs/01-github-explorer/babel.config.js), alterar a configuração para:
-
-~~~javascript
 module.exports = {
-  presets: [
-    '@babel/preset-env',
-    ['@babel/preset-react', {
-      runtime: 'automatic'
-    }]
-  ]
-};
+  entry: path.resolve(__dirname, 'src', 'index.jsx'), //define o arquivo inicial da aplicação
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx$/,
+        //test recebe expressão regular que determina se o arquivo é js
+        exclude: /node_modules/,
+        //exclui arquivos node_modules, não convertendo-os (é responsab// da biblioteca)
+        use: 'babel-loader'
+        //dependência que será instalada também
+        //faz integração entre babel e webpack
+      }
+    ]
+  }
+}
 ~~~
 
-- após executar `yarn webpack`, não será retornada mensagem de erro, e será exibido normalmente no browser.
+- `yarn add babel-loader -D`
 
-- ao invés de utilizar as tags HTML no arquivo [index.jsx](../reactjs/01-github-explorer/src/index.jsx), podemos também importar a função App(), criada no arquivo [App.jsx](../reactjs/01-github-explorer/src/App.jsx), da seguinte forma:
+- para testar se tudo está funcionando:
+  - no src, criar um arquivo [App.jsx](../reactjs/01-github-explorer/src/App.jsx).
+  - exportar uma função App:
 
-~~~javascript
-import { render } from 'react-dom';
+~~~jsx
+export function App() {
+  return <h1>Hello World! 🌎</h1>
+}
+~~~
+
+    - no index.jsx, importar do arquivo App a função App.
+
+~~~jsx
+import React from 'react';
 import { App } from './App'
-
-render(<App/>, document.getElementById('root'))
 ~~~
+
+  - executar: `yarn webpack` e verificar o arquivo [bundle.js](../reactjs/01-github-explorer/dist/bundle.js).
+
 
 ---
 

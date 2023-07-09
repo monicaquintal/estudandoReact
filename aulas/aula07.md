@@ -1,25 +1,45 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 07: Servindo HTML estático.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 07: Webpack Dev Server.</h2>
-</div>
-
-- utilizar a funcionalidade dev-server, dentro do webpack: `yarn webpack-dev-server -D`, e executar `yarn webpack`.
-- na configuração do webpack, incluir: 
+- podemos remover a tag &lt;script&gt; do arquivo [index.html](../reactjs/01-github-explorer/public/index.html).
+- no [webpack.config.js](../reactjs/01-github-explorer/webpack.config.js), instalar `yarn add html-webpack-plugin -D`, e importá-lo no arquivo:
 
 ~~~javascript
-devServer: {
-  contentBase: path.resolve(__dirname, 'public'),
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  mode: 'development',
+  entry: path.resolve(__dirname, 'src', 'index.jsx'), //define o arquivo inicial da aplicação
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html')
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      }
+    ],
+  }
 }
 ~~~
 
-- e executar: `yarn webpack serve`.
-
-> Com isso, caso façamos alterações em [App.js](../reactjs/01-github-explorer/src/App.jsx), automaticamente será atuaizado em http://localhost:8080/, gerando o bundle sem a necessidade de atualizar o webpack todas as vezes!
+- quando executado `yarn webpack`, será gerado o index.html na pasta dist, já referenciando automaticamente o bundle.js!!!
+  - ou seja, faz a referência automaticamente e, em caso de alterações, como renomeando o arquivo, não haverá necessidade de alterar as referências manualmente.
 
 ---
 

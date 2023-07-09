@@ -1,65 +1,56 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 04: Configurando Babel.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 04: Configurando Webpack.</h2>
-</div>
+- [Babel](https://babeljs.io/) é uma ferramenta/biblioteca utilizada para converter nosso código para uma maneira que todos os browsers e ambientes/navegadores consigam entender os códigos.
+  - `yarn add --dev @babel/core @babel/cli @babel/preset-env -D`
+  - o -d indica que trata-se da dependência de desenvolvimento, ou seja, qu não utilizará nenhuma dessas dependências quando o projeto for online/produção.
 
-- muitas vezes utilizado em conjunto com o Babel.
-- estipula configurações (loaders), que "ensinam" a aplicação como deve tratar os diferentes tipos de arquivos importados, como JSON, CSS, SASS, imagens, etcm tornando-os "legíveis" pelo browser.
-- para instalar: `yarn add webpack-cli -D`
+- criar um arquivop [babel.config.js](../reactjs/01-github-explorer/babel.config.js)
 
 ~~~javascript
-const path = require('path')
-
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.jsx'), //define o arquivo inicial da aplicação
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx$/,
-        //test recebe expressão regular que determina se o arquivo é js
-        exclude: /node_modules/,
-        //exclui arquivos node_modules, não convertendo-os (é responsab// da biblioteca)
-        use: 'babel-loader'
-        //dependência que será instalada também
-        //faz integração entre babel e webpack
-      }
-    ]
-  }
+  presets: [
+    '@babel/preset-env'
+    // extensão do babel que identifica onde a aplicação está sendo executada,
+    // para realizar as conversões das funcionalidades!
+  ]
+};
+~~~
+
+- criar o arquivo [index.js](../reactjs/01-github-explorer/src/index.js) no src.
+  - para a finalidade de exemplificar a conversão do código JS, inserir o exemplo:
+
+~~~javascript
+const user = {
+  name: 'Mônica',
 }
+
+console.log(user.address?.street);
 ~~~
 
-- `yarn add babel-loader -D`
+- executar `yarn babel src/index.js --out-file dist/bundle.js`.
+  - a partir de src/index js, cria a psta dist e o arquivo bundle.js, que conterá o código:
 
-- para testar se tudo está funcionando:
-  - no src, criar um arquivo [App.jsx](../reactjs/01-github-explorer/src/App.jsx).
-  - exportar uma função App:
+~~~javascript
+"use strict";
 
-~~~jsx
-export function App() {
-  return <h1>Hello World! 🌎</h1>
-}
+var _user$address;
+var user = {
+  name: 'Mônica'
+};
+console.log((_user$address = user.address) === null || _user$address === void 0 ? void 0 : _user$address.street);
+// é de difícil entendimento, não trabalhamos neste arquivo!!! 
+// apenas convertemos os arquivos para este formato, para que seja entendido por diversos navegadores.
 ~~~
 
-    - no index.jsx, importar do arquivo App a função App.
+- para utilizar o React, instalar a biblioteca: `yarn add @babel/preset-react -d`
+(e atualizar o arquivo babel.config.js)
 
-~~~jsx
-import React from 'react';
-import { App } from './App'
-~~~
-
-  - executar: `yarn webpack` e verificar o arquivo [bundle.js](../reactjs/01-github-explorer/dist/bundle.js).
+- converter index.js em [index.jsx](../reactjs/01-github-explorer/src/index.jsx)!
+  - o bundle deve ser sempre .js.
 
 
 ---

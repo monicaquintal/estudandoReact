@@ -1,61 +1,48 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></a>
-<h2>Estudando ReactJS</h2>
-<p>Rocketseat</p>
+<h1>Estudando ReactJS</h1>
+<h2>Aula 03: Configurando ambiente/Criando estrutura do projeto.</h2>
 </div>
 
-<div align="center">
-<h2>Aula 03: Configurando Babel.</h2>
-</div>
+## Configurando o ambiente
 
-- [Babel](https://babeljs.io/) é uma ferramenta/biblioteca utilizada para converter nosso código para uma maneira que todos os browsers e ambientes/navegadores consigam entender os códigos.
-  - `yarn add --dev @babel/core @babel/cli @babel/preset-env -D`
-  - o -d indica que trata-se da dependência de desenvolvimento, ou seja, qu não utilizará nenhuma dessas dependências quando o projeto for online/produção.
+- criação da pasta [reactjs](../reactjs), onde serão armazenados os projetos desenvolvidos.
+- criação da pasta do primeiro projeto, [01-github-explorer](../reactjs/01-github-explorer/).
+- inicializar o repositório, criando o **package.json**, que são as informações principais do projeto.
+  - há algumas formas de criá-lo:
+    - `yarn init -y`: usado na aula.
+    - OU "npm init -y".
+  - quando criado, traz informações do nome, versão, arquivo principal a ser executado e licença.
+  - incluiremos as dependências do projeto (códigos de terceiros que iremos inserir no projeto - bibliotecas).
+- instalar a primeira biblioteca a ser utilizada: do próprio React!
+  - `yarn add react`.
 
-- criar um arquivop [babel.config.js](../reactjs/01-github-explorer/babel.config.js)
-
-~~~javascript
-module.exports = {
-  presets: [
-    '@babel/preset-env'
-    // extensão do babel que identifica onde a aplicação está sendo executada,
-    // para realizar as conversões das funcionalidades!
-  ]
-};
-~~~
-
-- criar o arquivo [index.js](../reactjs/01-github-explorer/src/index.js) no src.
-  - para a finalidade de exemplificar a conversão do código JS, inserir o exemplo:
-
-~~~javascript
-const user = {
-  name: 'Mônica',
+~~~json
+{
+  "name": "01-github-explorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
 }
-
-console.log(user.address?.street);
 ~~~
 
-- executar `yarn babel src/index.js --out-file dist/bundle.js`.
-  - a partir de src/index js, cria a psta dist e o arquivo bundle.js, que conterá o código:
+- com isso, são criados os arquivos:
+  - node_modules: presente em todos os projetos JS.
+    - armazena as dependências que instalamos em nossa aplicação, como React e suas próprias dependências (loose-envify, object assing).
+  - package.json: presente em todos os projetos JS.
+  - yarn.lock.
 
-~~~javascript
-"use strict";
+- `yarn add react-dom`: 
+  - forma de trabalhar com React na web!!! 
+  - permite que o React se comunique com a árvore de elementos do HTML!
 
-var _user$address;
-var user = {
-  name: 'Mônica'
-};
-console.log((_user$address = user.address) === null || _user$address === void 0 ? void 0 : _user$address.street);
-// é de difícil entendimento, não trabalhamos neste arquivo!!! 
-// apenas convertemos os arquivos para este formato, para que seja entendido por diversos navegadores.
-~~~
+## Criando a estrutura
 
-- para utilizar o React, instalar a biblioteca: `yarn add @babel/preset-react -d`
-(e atualizar o arquivo babel.config.js)
-
-- converter index.js em [index.jsx](../reactjs/01-github-explorer/src/index.jsx)!
-  - o bundle deve ser sempre .js.
-
+- **pasta src** para armazenar o código de nossa aplicação (incluindo o próprio JS).
+- **pasta public**, onde ficarão os assets (index.html, ícones, robot.txt).
 
 ---
 
