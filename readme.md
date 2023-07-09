@@ -16,3 +16,5 @@
 <a href="./aulas/aula05.md">Aula 05: Estrutura do ReactJS.</a><br>
 <a href="./aulas/aula06.md">Aula 06: Servindo HTML estático.</a><br>
 <a href="./aulas/aula07.md">Aula 07: Webpack Dev Server.</a><br>
+<a href="./aulas/aula08.md">Aula 08: Utilizando source maps.</a><br>
+
