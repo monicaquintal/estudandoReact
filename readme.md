@@ -20,3 +20,4 @@
 <a href="./aulas/aula10.md">Aula 10: Ambiente dev e produção.</a><br>
 <a href="./aulas/aula11.md">Aula 11: Importando arquivos CSS.</a><br>
 <a href="./aulas/aula12.md">Aula 12: Utilizando SASS.</a><br>
+<a href="./aulas/aula13.md">Aula 13: Primeiro componente React.</a><br>
