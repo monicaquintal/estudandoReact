@@ -1,35 +1,45 @@
-const path = require('path')
+const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-// variávelcomum, usada para identificar se o ambiente pe de dev ou produção.
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-  entry: path.resolve(__dirname, 'src', 'index.jsx'), //define o arquivo inicial da aplicação
+  entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   devServer: {
+    hot: true,
     static: {
-      directory: path.join(__dirname, 'public')}
+      directory: path.join(__dirname, 'public')
+    },
   },
   plugins: [
+    isDevelopment && new webpack.HotModuleReplacementPlugin(),
+    isDevelopment && new ReactRefreshWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
-    })
-  ],
+    }),
+  ].filter(Boolean),
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.[jt]sx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
+          },
+        }
       },
       {
         test: /\.scss$/,
@@ -37,5 +47,5 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       }
     ],
-  }
-}
+  },
+};

@@ -29,3 +29,4 @@
 <a href="./aulas/aula14.md">Aula 14: Propriedades no React.</a><br>
 <a href="./aulas/aula15.md">Aula 15: Estado do Componente.</a><br>
 <a href="./aulas/aula16.md">Aula 16: A imutabilidade do React.</a><br>
+<a href="./aulas/aula17.md">Aula 17: Fast Refresh no Webpack.</a><br>
