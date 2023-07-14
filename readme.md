@@ -18,4 +18,5 @@
 <a href="./aulas/2023/aula02.md">Aula 02: Fundamentos do ReactJS.</a><br>
 <a href="./aulas/2023/aula03.md">Aula 03: Bundlers & Compilers.</a><br>
 <a href="./aulas/2023/aula04.md">Aula 04: Criando um projeto React.</a><br>
+<a href="./aulas/2023/aula05.md">Aula 05: Componentes.</a><br>
 
