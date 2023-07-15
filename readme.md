@@ -25,4 +25,5 @@
 
 <a href="./aulas/2023/aula07.md">Aula 07: CSS Modules.</a><br>
 <a href="./aulas/2023/aula08.md">Aula 08: CSS global.</a><br>
-<a href="./aulas/2023/aula09.md">Aula 09: Componente: Header.</a><br>
+<a href="./aulas/2023/aula09.md">Aula 09: Componente Header.</a><br>
+<a href="./aulas/2023/aula10.md">Aula 10: Componente Sidebar.</a><br>
