@@ -11,8 +11,8 @@
 - renomeado o antigo arquivo styles.css para [global.css](../../projetos/01-fundamentos-reactjs/src/global.css).
 - utilizado [Tailwind CSS](https://tailwindcss.com/docs/customizing-colors) para customização das cores.
 - utilizado na estilização do body "webkit-font-smoothing: antialiased;", que aplica padronização para fontes, tornando-as mais detalhadas, nos navegadores baseados em webkit.
-- ao importar uma fonte do [Google Fonts](https://fonts.google.com/specimen/Roboto?query=roboto), é muito importante que os links de preconnect sejam os primeiros executados na página!
-  - portanto, inseri-los após a tag meta charset= UTF-8, e antes das outras tags do head.
+- ao importar uma fonte do [Google Fonts](https://fonts.google.com/specimen/Roboto?query=roboto) no arquivo [index.html](../../projetos/01-fundamentos-reactjs/index.html), é muito importante que os links de preconnect sejam os primeiros executados na página!
+  - portanto, inseri-los após a tag meta charset=" UTF-8", e antes das outras tags do head.
 
 
 
