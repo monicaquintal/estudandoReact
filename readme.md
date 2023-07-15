@@ -21,3 +21,6 @@
 <a href="./aulas/2023/aula05.md">Aula 05: Componentes.</a><br>
 <a href="./aulas/2023/aula06.md">Aula 06: Propriedades.</a><br>
 
+### Parte 2: Estrutura da aplicação
+
+<a href="./aulas/2023/aula07.md">Aula 07: CSS Modules.</a><br>
