@@ -16,9 +16,6 @@
 - criação do Componente [Sidebar.jsx](../../projetos/01-fundamentos-reactjs/src/components/Sidebar.jsx) e sua estilização em [Sidebar.module.css](../../projetos/01-fundamentos-reactjs/src/components/Sidebar.module.css).
   - imagem para "capa" da sidebar obtida do [Unsplash](https://unsplash.com/pt-br).
 
-
-
-
 ---
 
 [Voltar ao início!](https://github.com/monicaquintal/estudandoReact/)
