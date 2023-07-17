@@ -7,8 +7,6 @@
 > [Figma](https://www.figma.com/community/file/1113573231685349036) do Projeto "Ignite Feed".
 
 - exclusão do Componente Post que havia sido criado para estudo, e criação dos arquivos [Post.jsx](../../projetos/01-fundamentos-reactjs/src/components/Post.jsx) e [Post.module.css](../../projetos/01-fundamentos-reactjs/src/components/Post.module.css).
-- 
-
 
 ---
 
