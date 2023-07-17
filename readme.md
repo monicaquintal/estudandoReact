@@ -29,3 +29,4 @@
 <a href="./aulas/2023/aula10.md">Aula 10: Componente Sidebar.</a><br>
 <a href="./aulas/2023/aula11.md">Aula 11: Finalizando Sidebar.</a><br>
 <a href="./aulas/2023/aula12.md">Aula 12: Componente Post.</a><br>
+<a href="./aulas/2023/aula13.md">Aula 13: Estilizações do Post.</a><br>
