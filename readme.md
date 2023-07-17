@@ -28,3 +28,4 @@
 <a href="./aulas/2023/aula09.md">Aula 09: Componente Header.</a><br>
 <a href="./aulas/2023/aula10.md">Aula 10: Componente Sidebar.</a><br>
 <a href="./aulas/2023/aula11.md">Aula 11: Finalizando Sidebar.</a><br>
+<a href="./aulas/2023/aula10.md">Aula 12: Componente Post.</a><br>
