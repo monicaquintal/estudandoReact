@@ -8,6 +8,20 @@
 
 - continuação do desenvolvimento, arquivos [Post.jsx](../../projetos/01-fundamentos-reactjs/src/components/Post.jsx) e [Post.module.css](../../projetos/01-fundamentos-reactjs/src/components/Post.module.css).
 
+### Observações importantes:
+
+~~~css
+.post + .post {
+  /* estiliza todo post que possuir, antes dele, um outro post! */
+}
+~~~
+
+~~~css
+.post > header {
+  /* seleciona apenas a header DENTRO do post */
+}
+~~~
+
 ---
 
 [Voltar ao início!](https://github.com/monicaquintal/estudandoReact/)
