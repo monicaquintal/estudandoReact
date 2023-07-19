@@ -1,4 +1,5 @@
 import { PencilLine } from 'phosphor-react';
+import { Avatar } from './Avatar';
 
 import styles from './Sidebar.module.css';
 
@@ -11,10 +12,8 @@ export function Sidebar() {
       />
       
       <div className={styles.profile}>
-        <img 
-          className={styles.avatar}
-          src="https://scontent.fssz3-1.fna.fbcdn.net/v/t1.18169-9/15665616_1284915764888199_4161337334963949149_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=0Bhm05ztd5AAX-zJBI9&_nc_ht=scontent.fssz3-1.fna&oh=00_AfCgVjzRgQJfW8HMGvLhhCeBWaNm04OUJ-z3uZe7AITG7Q&oe=64DAAA2E" 
-        />
+        <Avatar src="https://scontent.fssz3-1.fna.fbcdn.net/v/t1.18169-9/15665616_1284915764888199_4161337334963949149_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=4Lw0MiGx3DAAX8ye_QR&_nc_ht=scontent.fssz3-1.fna&oh=00_AfAWz5uyRImrZjLJiXLAwb-iNYjJW6KuXbjcP2umPYYdiA&oe=64DED6EE"/>
+
         <strong>Mônica Quintal</strong>
         <span>Web Developer</span>
       </div>

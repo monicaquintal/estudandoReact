@@ -19,14 +19,6 @@
   /* calcula a altura que o avatar ficará */
 }
 
-.avatar {
-  width: calc(3rem + 12px); /* evita que a imagem seja comprimida */
-  height: calc(3rem + 12px); /* evita que a imagem seja comprimida */
-  border-radius: 8px;
-  border: 4px solid var(--gray-800);
-  outline: 2px solid var(--green-500);
-}
-
 .profile strong {
   margin-top: 1rem;
   color: var(--gray-100);
