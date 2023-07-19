@@ -34,3 +34,4 @@
 <a href="./aulas/2023/aula15.md">Aula 15: Componente Comment.</a><br>
 <a href="./aulas/2023/aula16.md">Aula 16: Estilizações do Comentário.</a><br>
 <a href="./aulas/2023/aula17.md">Aula 17: Componente Avatar.</a><br>
+<a href="./aulas/2023/aula18.md">Aula 18: Aplicando responsividade.</a><br>
