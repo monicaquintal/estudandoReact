@@ -5,8 +5,7 @@ export function Comment() {
   return (
     <div className={styles.comment}>
       <img 
-        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-        alt="" 
+        src="https://images-na.ssl-images-amazon.com/images/S/influencer-profile-image-prod/logo/influencer-637769c7_1649816729678_original._CR0,0,723,723_._FMjpg_.jpeg" 
       />
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
@@ -16,7 +15,7 @@ export function Comment() {
               <time title="18 de julho às 23:30" dateTime="2023-07-16 23:30:00">Há cerca de 1 hora.</time>
             </div>
             <button title="Deletar comentário">
-              <Trash size={20} />
+              <Trash size={24} />
             </button>
           </header>
           <p>Muito bom, parabéns! 👏👏</p>
