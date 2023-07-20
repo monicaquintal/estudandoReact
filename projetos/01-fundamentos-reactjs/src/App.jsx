@@ -29,9 +29,9 @@ const posts = [
       role: 'Mobile Developer'
     },
     content: [
-      { type: 'paragraph', content: 'Fala galera! 👋'},
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare. 🚀'},
-      { type: 'link', content: 'jane.design/doctorcare' }
+      { type: 'paragraph', content: 'Olá pessoal!'},
+      { type: 'paragraph', content: 'Subi mais um projeto no meu portfólio, feito no NLW Return da Rocketseat. O projeto é chamado DoctorCare.'},
+      { type: 'link', content: 'john.design/doctorcare' }
     ],
     publishedAt: new Date('2023-07-18 00:05:00')
   },
@@ -48,9 +48,9 @@ export function App() {
           {posts.map(posts => {
             return (
               <Post 
-                author={post.author}
-                content={post.content}
-                publishedAt={post.publishedAt}
+                author={posts.author}
+                content={posts.content}
+                publishedAt={posts.publishedAt}
               />
             )
           })}

@@ -39,3 +39,4 @@
 ### Parte 3: Os motores do React
 
 <a href="./aulas/2023/aula19.md">Aula 19: Iterando no JSX.</a><br>
+<a href="./aulas/2023/aula20.md">Aula 20: Propriedades do Post.</a><br>
