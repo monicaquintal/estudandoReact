@@ -9,9 +9,10 @@ import styles from './Post.module.css';
 
 export function Post({ author, publishedAt, content }) {
   const [comments, setComments] = useState([
-    1,
-    2,
-  ]) 
+    'Muito bom! 👏'
+  ]);
+
+  const [newCommentText, setNewCommentText] = useState('');
 
   const publishedDateFormated = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR,
@@ -23,18 +24,20 @@ export function Post({ author, publishedAt, content }) {
   });
 
   function handleCreateNewComment() {
-    event.preventDefault() // evita o comportamento padrão do HTML, de redirecionamento da página, quando utilizamos onSubmit!
-    setComments([...comments, comments.length + 1]);
-    // conceito de imutabilidade: passamos os valores QUE JÁ EXISTIAM (1 e 2) + o valor inserido (3)!
-  }
+    event.preventDefault();
+    setComments([...comments, newCommentText]);
+    setNewCommentText('');
+  };
+
+  function handleNewCommentChange() {
+    setNewCommentText(event.target.value);
+  };
 
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar 
-            src={author.avatarUrl} 
-          />
+          <Avatar src={author.avatarUrl} />
           <div className={styles.authorInfo}>
             <strong>{author.name}</strong>
             <span>{author.role}</span>
@@ -58,7 +61,10 @@ export function Post({ author, publishedAt, content }) {
       <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
         <textarea 
+          name = "comment"
           placeholder="Deixe um comentário"
+          value={newCommentText}
+          onChange={handleNewCommentChange}
         />
         <footer>
           <button type="submit">Publicar</button>
@@ -67,7 +73,7 @@ export function Post({ author, publishedAt, content }) {
 
       <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment />
+          return <Comment content={comment}/>
         })}
       </div>
     </article>

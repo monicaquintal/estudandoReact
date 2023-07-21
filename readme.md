@@ -41,3 +41,4 @@
 <a href="./aulas/2023/aula19.md">Aula 19: Iterando no JSX.</a><br>
 <a href="./aulas/2023/aula20.md">Aula 20: Propriedades do Post.</a><br>
 <a href="./aulas/2023/aula21.md">Aula 21: Estado (useState).</a><br>
+<a href="./aulas/2023/aula22.md">Aula 22: Inserindo comentários (Programação declarativa).</a><br>
