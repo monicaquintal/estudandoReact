@@ -43,3 +43,4 @@
 <a href="./aulas/2023/aula21.md">Aula 21: Estado (useState).</a><br>
 <a href="./aulas/2023/aula22.md">Aula 22: Inserindo comentários (Programação declarativa).</a><br>
 <a href="./aulas/2023/aula23.md">Aula 23: Entendendo a key.</a><br>
+<a href="./aulas/2023/aula24.md">Aula 24: Comunicação entre componentes.</a><br>
