@@ -44,4 +44,6 @@
 <a href="./aulas/2023/aula22.md">Aula 22: Inserindo comentários (Programação declarativa).</a><br>
 <a href="./aulas/2023/aula23.md">Aula 23: Entendendo a key.</a><br>
 <a href="./aulas/2023/aula24.md">Aula 24: Comunicação entre componentes.</a><br>
-<a href="./aulas/2023/aula24.md">Aula 25: Removendo comentários (imutabilidade).</a><br>
+<a href="./aulas/2023/aula25.md">Aula 25: Removendo comentários (imutabilidade).</a><br>
+<a href="./aulas/2023/aula26.md">Aula 26: Validando formulário.</a><br>
+<a href="./aulas/2023/aula27.md">Aula 27: Realizando likes nos comentários.</a><br>
