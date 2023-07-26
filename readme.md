@@ -48,3 +48,7 @@
 <a href="./aulas/2023/aula26.md">Aula 26: Validando formulário.</a><br>
 <a href="./aulas/2023/aula27.md">Aula 27: Realizando likes nos comentários.</a><br>
 <a href="./aulas/2023/aula28.md">Aula 28: Entendendo closures no React.</a><br>
+
+### Parte 4: Aprimorando a aplicação
+
+<a href="./aulas/2023/aula29.md">Aula 29: Fundamentos do TypeScript.</a><br>
