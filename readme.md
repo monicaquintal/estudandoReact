@@ -53,3 +53,4 @@
 
 <a href="./aulas/2023/aula29.md">Aula 29: Fundamentos do TypeScript.</a><br>
 <a href="./aulas/2023/aula30.md">Aula 30: TypeScript no React.</a><br>
+<a href="./aulas/2023/aula31.md">Aula 31: Extensão de interfaces.</a><br>
