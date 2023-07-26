@@ -52,3 +52,4 @@
 ### Parte 4: Aprimorando a aplicação
 
 <a href="./aulas/2023/aula29.md">Aula 29: Fundamentos do TypeScript.</a><br>
+<a href="./aulas/2023/aula30.md">Aula 30: TypeScript no React.</a><br>
