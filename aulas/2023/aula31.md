@@ -53,8 +53,6 @@ export function Avatar( { hasBorder = true, ...props }: AvatarProps) {
 }
 ~~~
 
-
-
 ---
 
 [Voltar ao início!](https://github.com/monicaquintal/estudandoReact/)

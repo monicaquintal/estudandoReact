@@ -10,7 +10,7 @@
 
 <div id="conteudo" align="justify">
 
-## Capítulo 01: Fundamentos do ReactJS
+## Projeto 01: Fundamentos do ReactJS
 
 ### Parte 1: Iniciando com React
 
@@ -54,3 +54,11 @@
 <a href="./aulas/2023/aula29.md">Aula 29: Fundamentos do TypeScript.</a><br>
 <a href="./aulas/2023/aula30.md">Aula 30: TypeScript no React.</a><br>
 <a href="./aulas/2023/aula31.md">Aula 31: Extensão de interfaces.</a><br>
+
+---
+
+## Projeto 02: Criando SPAs com ReactJS
+
+### Parte 1: Estrutura da Aplicação
+
+<a href="./aulas/2023/aula32.md">Aula 01: Introdução.</a><br>
