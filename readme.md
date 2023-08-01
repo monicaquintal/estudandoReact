@@ -63,3 +63,4 @@
 
 <a href="./aulas/2023/aula32.md">Aula 01: Introdução.</a><br>
 <a href="./aulas/2023/aula33.md">Aula 02: Criação do projeto.</a><br>
+<a href="./aulas/2023/aula34.md">Aula 03: Styled Components.</a><br>
