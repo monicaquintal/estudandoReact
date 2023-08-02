@@ -65,3 +65,4 @@
 <a href="./aulas/2023/aula33.md">Aula 02: Criação do projeto.</a><br>
 <a href="./aulas/2023/aula34.md">Aula 03: Styled Components.</a><br>
 <a href="./aulas/2023/aula35.md">Aula 04: Configurando temas.</a><br>
+<a href="./aulas/2023/aula36.md">Aula 05: Tipagem de temas.</a><br>
