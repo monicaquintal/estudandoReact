@@ -67,3 +67,4 @@
 <a href="./aulas/2023/aula35.md">Aula 04: Configurando temas.</a><br>
 <a href="./aulas/2023/aula36.md">Aula 05: Tipagem de temas.</a><br>
 <a href="./aulas/2023/aula37.md">Aula 06: Estilos globais.</a><br>
+<a href="./aulas/2023/aula38.md">Aula 07: Cores & fonte.</a><br>
